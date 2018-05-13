@@ -13,7 +13,7 @@ module.exports = function (app) {
     res.json(true);
   });
 
-  app.post("/api/result", function () {
+  app.post("/api/friends", function () {
     // Empty out the arrays of data
     friendData = [];
 
