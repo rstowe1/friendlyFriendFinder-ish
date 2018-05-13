@@ -1,47 +1,33 @@
-for (var selector in (config)) {
-  $('#selector').chosen(config[selector]);
-}
+// use this to hold all of the data for potential
+// friendly friends
+// of friendlyfriends
 
-  $("#submit").on("click", function (event) {
-    event.preventDefault();
 
-    // Form validation
-    function validateForm() {
-      var isValid = true;
-      $(".form-control").each(function () {
-        if ($(this).val() === "") {
-          isValid = false;
-        }
-      });
+var friendArray = {
+  name: $("#name").val(),
+  photo: $("#photo").val(),
+  scores: [
+    $("#question1").val(),
+    $("#question2").val(),
+    $("#question3").val(),
+    $("#question4").val(),
+    $("#question55").val(),
+    $("#question6").val(),
+    $("#question7").val(),
+    $("#question8").val(),
+    $("#question9").val(),
+    $("#question10").val()
+  ]
+};
 
-      $(".chosen-select").each(function () {
 
-        if ($(this).val() === "") {
-          isValid = false;
-        }
-      });
-      return isValid;
-    }
 
-    // If all required fields are filled
-    if (validateForm()) {
-      // Create an object for the user"s data
-      var userData = {
-        name: $("#name").val(),
-        photo: $("#photo").val(),
-        scores: [
-          $("#q1").val(),
-          $("#q2").val(),
-          $("#q3").val(),
-          $("#q4").val(),
-          $("#q5").val(),
-          $("#q6").val(),
-          $("#q7").val(),
-          $("#q8").val(),
-          $("#q9").val(),
-          $("#q10").val()
-        ]
-      };
+// Note how we export the array. This makes it accessible to other files using require.
+module.exports = friendArray;
+
+
+
+
 
     } else {
       alert("Please fill out all fields before submitting!");

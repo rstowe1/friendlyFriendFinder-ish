@@ -12,8 +12,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <script type="text/javascript" src="../app/data/friends.js"></script>
-
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
   <title>Friendly Friend Finder!!!</title>
 </head>
 <body>
@@ -36,7 +35,7 @@
 
   <h3><strong>Question 1</strong></h3>
   <h4>you often wonder how old you are?</h4>
-  <select class="chosen-select" id="q1">
+  <select class="chosen-select" id="question1">
     <option value=""></option>
     <option value="1">1 (Strongly Disagree)</option>
     <option value="2">2</option>
@@ -47,7 +46,7 @@
 
   <h3><strong>Question 2</strong></h3>
   <h4>you don't recognize the person in your kitchen?</h4>
-  <select class="chosen-select" id="q2">
+  <select class="chosen-select" id="question2">
     <option value=""></option>
     <option value="1">1 (Strongly Disagree)</option>
     <option value="2">2</option>
@@ -59,7 +58,7 @@
 
   <h3><strong>Question 3</strong></h3>
   <h4>boss getting on your nerves?</h4>
-  <select class="chosen-select" id="q3">
+  <select class="chosen-select" id="question3">
     <option value=""></option>
     <option value="1">1 (Strongly Disagree)</option>
     <option value="2">2</option>
@@ -71,7 +70,7 @@
 
   <h3><strong>Question 4</strong></h3>
   <h4>co-worker about to find the pimp hand?</h4>
-  <select class="chosen-select" id="q4">
+  <select class="chosen-select" id="question4">
     <option value=""></option>
     <option value="1">1 (Strongly Disagree)</option>
     <option value="2">2</option>
@@ -83,7 +82,7 @@
 
   <h3><strong>Question 5</strong></h3>
   <h4>one more stupid question away from backhanding somebody in the face with a chair?</h4>
-  <select class="chosen-select" id="q5">
+  <select class="chosen-select" id="question5">
     <option value=""></option>
     <option value="1">1 (Strongly Disagree)</option>
     <option value="2">2</option>
@@ -95,7 +94,7 @@
 
   <h3><strong>Question 6</strong></h3>
   <h4>you're still suprised by stupid questions?</h4>
-  <select class="chosen-select" id="q6">
+  <select class="chosen-select" id="question6">
     <option value=""></option>
     <option value="1">1 (raresly...)</option>
     <option value="2">2</option>
@@ -107,7 +106,7 @@
 
   <h3><strong>Question 7</strong></h3>
   <h4>how often do you hope that a blimp lands on somebody?</h4>
-  <select class="chosen-select" id="q7">
+  <select class="chosen-select" id="question7">
     <option value=""></option>
     <option value="1">1 (frequent)</option>
     <option value="2">2</option>
@@ -118,7 +117,7 @@
 
   <h3><strong>Question 8</strong></h3>
   <h4>i am usually right.</h4>
-  <select class="chosen-select" id="q8">
+  <select class="chosen-select" id="question8">
     <option value=""></option>
     <option value="1">1 (never)</option>
     <option value="2">2</option>
@@ -129,7 +128,7 @@
 
   <h3><strong>Question 9</strong></h3>
   <h4>everybody is against me</h4>
-  <select class="chosen-select" id="q9">
+  <select class="chosen-select" id="question9">
     <option value=""></option>
     <option value="1">1 (Strongly Disagree)</option>
     <option value="2">2</option>
@@ -140,7 +139,7 @@
 
   <h3><strong>Question 10</strong></h3>
   <h4>its not my fault!</h4>
-  <select class="chosen-select" id="q10">
+  <select class="chosen-select" id="question10">
     <option value=""></option>
     <option value="1">1 (never)</option>
     <option value="2">2</option>
@@ -154,43 +153,20 @@
 
   <!-- Submit Button -->
   <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
-    Submit</button>
+    Submit
+  </button>
 
   <hr>
   <footer class="footer">
     <div class="container">
-      <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+      <p style="margin-bottom: 5px;"><a href="/api/friends">API Friends List</a> -||- Ryan's Friendly Friend app</p>
     </div>
   </footer>
 
 </div>
 
-<!-- Modal -->
-<!--<div id="results-modal" class="modal fade" role="dialog">-->
-  <!--<div class="modal-dialog">-->
-
-    <!--&lt;!&ndash; Modal content&ndash;&gt;-->
-    <!--<div class="modal-content">-->
-      <!--<div class="modal-header">-->
-        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
-        <!--<h2 class="modal-title"><strong>Best Match</strong></h2>-->
-      <!--</div>-->
-      <!--<div class="modal-body">-->
-        <!--<h2 id="match-name"></h2>-->
-        <!--<img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">-->
-      <!--</div>-->
-      <!--<div class="modal-footer">-->
-        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-      <!--</div>-->
-    <!--</div>-->
-
-  <!--</div>-->
-<!--</div>-->
-
-
 
 </body>
-
 
 
 <!-- Optional JavaScript -->
@@ -206,3 +182,92 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
+<script type="text/javascript">
+
+  // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+  // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+  // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+  // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+
+  $("#submit").on("click", function (event) {
+    event.preventDefault();
+
+    // Form validation
+    function validateForm() {
+      var isValid = true;
+      $(".form-control").each(function () {
+        if ($(this).val() === "") {
+          isValid = false;
+        }
+      });
+
+      $(".chosen-select").each(function () {
+
+        if ($(this).val() === "") {
+          isValid = false;
+        }
+      });
+      return isValid;
+    }
+
+    $("#submit").on("click", function (event) {
+      event.preventDefault();
+
+      // Form validation
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function () {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+
+        $(".chosen-select").each(function () {
+
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+
+      // If all required fields are filled
+      if (validateForm()) {
+        // Create an object for the user"s data
+        var userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#question1").val(),
+            $("#question2").val(),
+            $("#question3").val(),
+            $("#question4").val(),
+            $("#question55").val(),
+            $("#question6").val(),
+            $("#question7").val(),
+            $("#question8").val(),
+            $("#question9").val(),
+            $("#question10").val()
+          ]
+        };
+
+      }
+
+      console.log(potentialFriend);
+
+
+      // Clear the form when submitting
+      $("#reserve-name").val("");
+      $("#reserve-phone").val("");
+      $("#reserve-email").val("");
+      $("#reserve-unique-id").val("");
+
+    });
+
+  );
+  };
+
+
+</script>
